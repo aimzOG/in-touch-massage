@@ -44,9 +44,9 @@ function jsTask() {
 // Cachebust
 var cbString = new Date().getTime();
 function cacheBustTask() {
-  return src(['index.html'])
+  return src(['html/index.html'])
     .pipe(replace(/cb=\d+/g, 'cb=' + cbString))
-    .pipe(dest('.'));
+    .pipe(dest('html'));
 }
 
 // Watch task: watch SCSS and JS files for changes
