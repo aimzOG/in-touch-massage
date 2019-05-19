@@ -1,0 +1,167 @@
+@import "theme", "typography";
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+main {
+  background: linear-gradient(#1d3a41 50%, #000);
+}
+
+.background {
+  position: relative;
+  background: $main-content-background-color;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &::before {
+    content: '';
+    background-image: url(../images/zen.jpg);
+    background-size: cover;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.7;
+  }
+}
+
+body {
+  color: $text-color;
+  text-align: center;
+  font-family: $font-family-body;
+  font-size: 15px;
+}
+
+
+// @keyframes fadeIn {
+//   from {
+//     opacity: 0;
+//   }
+
+//   to {
+//     opacity: 1;
+//   }
+// }
+
+header {
+  z-index: 1;
+
+  h1 {
+    // opacity: 1;
+    // animation: fadeIn ease-in 1;
+    // animation-fill-mode: forwards;
+    // animation-delay: 0.7s;
+    // animation-duration: 1.5s;
+    font-family: $font-family-header;
+  }
+}
+
+.book-nav {
+  padding-top: 1.5em;
+  width: 75%;
+  margin: 0 auto;
+
+  & ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    li {
+      font-family: $font-family-header;
+      font-size: 1em;
+      text-align: left;
+
+    }
+
+    button {
+      font-size: 1.5em;
+    }
+  }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  button {
+    font-size: .8em;
+    background: none;
+    background-color: $button-color;
+    border-radius: 10px;
+  }
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+
+  &:visited {
+    color: $link-color;
+  }
+}
+
+iframe {
+  z-index: 1;
+}
+
+footer {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  font-size: .8em;
+  justify-content: space-around;
+  align-items: center;
+  padding: .75em 0;
+  background: $background-footer-color;
+
+  p {
+    line-height: 1.5em;
+    margin: 0;
+  }
+}
+
+/* Small devices (tablets, 600px and up) */
+@media (min-width: 600px) and (max-width: 899px) {
+  // .home-header {
+  //   position: absolute;
+  //   top: 8em;
+  //   right: 6em;
+  // }
+
+  // footer {
+  //   position: absolute;
+  //   bottom: 0;
+  //   right: 0;
+  //   justify-content: flex-end;
+
+  //   .address,
+  //   .contact {
+  //     padding: 0 2em;
+  //   }
+  // }
+  body {
+    font-size: 30px;
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 900px) {
+  body {
+    font-size: 30px;
+  }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {}
