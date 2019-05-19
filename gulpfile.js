@@ -41,13 +41,13 @@ function jsTask() {
     );
 }
 
-// Cachebust
-var cbString = new Date().getTime();
-function cacheBustTask() {
-  return src(['html/index.html'])
-    .pipe(replace(/cb=\d+/g, 'cb=' + cbString))
-    .pipe(dest('html'));
-}
+// // Cachebust
+// var cbString = new Date().getTime();
+// function cacheBustTask() {
+//   return src(['html/*'])
+//     .pipe(replace(/cb=\d+/g, 'cb=' + cbString))
+//     .pipe(dest('html'));
+// }
 
 // Watch task: watch SCSS and JS files for changes
 // If any change, run scss and js tasks simultaneously
@@ -61,6 +61,6 @@ function watchTask() {
 // then runs cacheBust, then watch task
 exports.default = series(
   parallel(scssTask, jsTask),
-  cacheBustTask,
+  // cacheBustTask,
   watchTask
 );
