@@ -20,6 +20,7 @@ main {
   flex-direction: column;
   justify-content: center;
 
+
   &::before {
     content: '';
     background-image: url(../images/zen.jpg);
