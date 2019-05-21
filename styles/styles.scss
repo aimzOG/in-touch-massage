@@ -20,6 +20,7 @@ main {
   flex-direction: column;
   justify-content: center;
 
+
   &::before {
     content: '';
     background-image: url(../images/zen.jpg);
@@ -41,50 +42,15 @@ body {
   font-size: 15px;
 }
 
-
-// @keyframes fadeIn {
-//   from {
-//     opacity: 0;
-//   }
-
-//   to {
-//     opacity: 1;
-//   }
-// }
-
 header {
   z-index: 1;
+  max-width: 90%;
+  margin: 1em auto .5em;
 
   h1 {
-    // opacity: 1;
-    // animation: fadeIn ease-in 1;
-    // animation-fill-mode: forwards;
-    // animation-delay: 0.7s;
-    // animation-duration: 1.5s;
     font-family: $font-family-header;
-  }
-}
-
-.book-nav {
-  padding-top: 1.5em;
-  width: 75%;
-  margin: 0 auto;
-
-  & ul {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
-    li {
-      font-family: $font-family-header;
-      font-size: 1em;
-      text-align: left;
-
-    }
-
-    button {
-      font-size: 1.5em;
-    }
+    margin: 0;
+    padding-bottom: .3em;
   }
 }
 
@@ -92,11 +58,16 @@ ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 
-  button {
+  a {
     font-size: .8em;
     background: none;
+    padding: .05em .25em;
     background-color: $button-color;
+    border: 1px solid white;
     border-radius: 10px;
   }
 }
@@ -119,11 +90,10 @@ footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: auto;
-  font-size: .8em;
+  max-height: 5em;
+  font-size: 0.6em;
   justify-content: space-around;
-  align-items: center;
-  padding: .75em 0;
+  padding: 0.5em 0;
   background: $background-footer-color;
 
   p {
