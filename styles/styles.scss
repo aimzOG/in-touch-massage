@@ -6,6 +6,12 @@ body {
   height: 100%;
 }
 
+.skip-nav {
+  position: absolute;
+  top: 0;
+  left: -10000px
+}
+
 main {
   background: linear-gradient(#1d3a41 50%, #000);
 }
@@ -39,13 +45,13 @@ body {
   color: $text-color;
   text-align: center;
   font-family: $font-family-body;
-  font-size: 15px;
+  font-size: 20px;
 }
 
 header {
   z-index: 1;
   max-width: 90%;
-  margin: 1em auto .5em;
+  margin: 1em auto;
 
   h1 {
     font-family: $font-family-header;
@@ -62,13 +68,25 @@ ul {
   justify-content: space-around;
   align-items: center;
 
+  .i-text {
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: $button-color;
+    padding: .15em .25em;
+  }
+
   a {
     font-size: .8em;
     background: none;
-    padding: .05em .25em;
-    background-color: $button-color;
-    border: 1px solid white;
-    border-radius: 10px;
+
+    .only-icon {
+      font-weight: 900;
+      background-color: $button-color;
+      font-size: 1.5em;
+      border: 1px solid white;
+      border-radius: 10px;
+      padding: .15em .15em;
+    }
   }
 }
 
@@ -83,6 +101,8 @@ a {
 
 iframe {
   z-index: 1;
+  max-width: 90%;
+  margin: 0 auto;
 }
 
 footer {
@@ -100,6 +120,71 @@ footer {
     line-height: 1.5em;
     margin: 0;
   }
+}
+
+.accordion-container {
+  max-width: 90%;
+  margin: 0 auto;
+  z-index: 1;
+  font-family: $font-family-body;
+  opacity: .9;
+  overflow: scroll;
+}
+
+button {
+  &.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: center;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    z-index: 1;
+    font-family: $font-family-body;
+    font-size: .8em;
+  }
+}
+
+button.accordion.active,
+button.accordion:hover {
+  background-color: white;
+
+}
+
+div {
+  &.panel {
+    padding: 0 18px;
+    background-color: $accordion-color;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.4s ease-in-out;
+    opacity: 0;
+    font-family: $font-family-body;
+    font-size: .8em;
+
+    &.show {
+      opacity: 1;
+      max-height: 500px;
+      /* Whatever you like, as long as its more than the height of the content (on all screen sizes) */
+    }
+  }
+}
+
+button.accordion:after {
+  content: '\02795';
+  /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
+}
+
+button.accordion.active:after {
+  content: "\2796";
+  /* Unicode character for "minus" sign (-) */
 }
 
 /* Small devices (tablets, 600px and up) */

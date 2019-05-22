@@ -11,19 +11,25 @@
     integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
     crossorigin="anonymous">
   <link rel="stylesheet" href="dist/styles.css">
-  <title>Document</title>
+  <title>Welcome to In Touch Massage</title>
 </head>
 
 <body>
-  <main class="background">
+  <a href="#main-content" class="skip-nav">Skip Navigation</a>
+  <main class="background" id="main-content">
     <header class="home-header">
       <h1>In Touch Massage</h1>
       <nav>
         <ul>
-          <li><a href="#"><i class="fas fa-list-alt"></i> Services</a></li>
-          <li><a href=html/book.html> <i class="fas fa-calendar-check"></i> Book</a>
+          <li><a class="i-text" href="#" title="Services"><i class="fas fa-list-alt"></i>
+              Services</a></li>
+          <li><a class="i-text" href=html/book.html title="Book"> <i
+                class="fas fa-calendar-check"></i>
+              Book</a>
           </li>
-          <li><a href="#"><i class="fas fa-question-circle"></i> FAQ</a></li>
+          <li><a class="i-text" href="html/faq.html" title="FAQ Page"><i
+                class="fas fa-question-circle"></i> FAQ</a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -35,8 +41,9 @@
       </div>
       <div class="contact">
         <p>Jane Doe</p>
-        <p>(555)555-555</p>
-        <p>info@intouchmassage.com
+        <p><i class="fas fa-phone"></i> <a href="tel:5555555555">(555)555-5555</a></p>
+        <p><i class="fas fa-envelope"></i> <a
+            href="email:info@intouch.com">info@intouch.com</a></p>
       </div>
     </footer>
   </main>
