@@ -129,6 +129,16 @@ footer {
   font-family: $font-family-body;
   opacity: .9;
   overflow: scroll;
+  border-radius: 10px 10px 0 0;
+
+  :nth-child(11),
+  :last-child {
+    border-radius: 0 0 10px 10px;
+  }
+
+  :nth-child(11).active {
+    border-radius: 0;
+  }
 }
 
 button {
@@ -215,6 +225,10 @@ button.accordion.active:after {
 @media (min-width: 900px) {
   body {
     font-size: 30px;
+  }
+
+  .accordion-container {
+    max-width: 70%;
   }
 }
 
