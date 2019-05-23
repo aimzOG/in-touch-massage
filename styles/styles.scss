@@ -124,21 +124,21 @@ footer {
 
 .accordion-container {
   max-width: 90%;
-  margin: 0 auto;
+  margin: 0 auto 1em;
   z-index: 1;
   font-family: $font-family-body;
   opacity: .9;
   overflow: scroll;
-  border-radius: 10px 10px 0 0;
+  border-radius: 10px;
 
-  :nth-child(11),
-  :last-child {
-    border-radius: 0 0 10px 10px;
-  }
+  // :nth-child(11),
+  // :last-child {
+  //   border-radius: 0 0 10px 10px;
+  // }
 
-  :nth-child(11).active {
-    border-radius: 0;
-  }
+  // :nth-child(11).active {
+  //   border-radius: 0;
+  // }
 }
 
 button {
